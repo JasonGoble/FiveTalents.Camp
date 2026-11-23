@@ -8,14 +8,14 @@ Read `docs/superpowers/specs/2026-11-22-fivetalents-camp-phase1-design.md` first
 
 - Phase I is one laptop and a printer, Windows or macOS, no internet. No multi-machine sync, no nurse laptop, no in-app registration, no flexible import. Do not build toward them beyond leaving the schema portable.
 - Relational database is the system of record (ADR 0001). Every edit also writes a change-log row in the same transaction. Printouts are thin views (template plus query) over current-state tables.
-- Printing goes through the browser with print CSS. Printouts must work in greyscale; status is a word, never colour alone.
+- Printing goes through the browser with print CSS. Colour is allowed (the inkjet and laser both print it), but every printout must still read in greyscale or photocopied. Status is a word, never colour alone.
 - Fonts and assets are bundled. No CDN.
 - Camper data includes minors' medical details. Never put real data in the repo, issues, PRs, logs, test fixtures or screenshots. Use obviously fake data. Never silently correct questionable data; flag it for a person.
 - Out of scope entirely: Saturday teams. Roommate requests are a possible later nice-to-have.
 
 ## Stack
 
-Follows FiveTalents: .NET 10, ASP.NET Core, EF Core 10, Angular 21 with Material, signals-first state. SQLite for Phase I. The look follows FiveTalents and is being reworked with the Design tool as the first build step. Do not copy theme values from FiveTalents until that rework is done.
+Follows FiveTalents: .NET 10, ASP.NET Core, EF Core 10, Angular 21 with Material, signals-first state. SQLite for Phase I. The look is the FiveTalents look (tokens, Cormorant Garamond and Inter, `docs/brand/media-kit.md` in the FiveTalents repo), kept as the baseline. It is conformed to current tools (Material themed from the brand tokens, fonts and icons bundled) and given a print-first standard, with each departure from FiveTalents recorded with a reason (#1). The Design canvas for it was approved on 2026-11-22.
 
 ## Branching and GitHub workflow
 
@@ -44,11 +44,11 @@ For any change a person can see (screens, printouts, wording), finish, verify an
 
 ## Where we are (2026-11-22)
 
-The design is approved and the repo is set up. No issues are filed and no code exists yet. Next, in order:
+The design is approved, the repo is set up and the first issues are filed in the "1. Foundation and first slice" milestone. No code exists yet. In order:
 
-1. File the first issues in the "1. Foundation and first slice" milestone: rework the FiveTalents look with the Design tool (print-first, bundled fonts), the .NET and Angular solution skeleton, then the first slice (add a person, assign a cabin, print one carry card). Propose them to Jason before filing.
-2. Retire the Cairn repo (`JasonGoble/Cairn`): add a "retired, superseded by FiveTalents.Camp" note to its README, and archive it once Jason says so.
-3. Port what is still useful from Cairn's `docs/camp-context.md` and from the medication design (structured medication times, per-printout visibility tags) into this repo's docs.
+1. #1: conform the FiveTalents look and add the print-first standard (Design canvas approved; the repo write-up of tokens and the print standard is still to do).
+2. #2 solution skeleton, #3 person record and change log, #4 add-a-person screen, #5 cabins, #6 carry card (printed only when a station needs it).
+3. Off the main path: #7 retire the Cairn repo (archive only once Jason says so), #8 port the still-useful Cairn context and medication design into this repo's docs, #9 docs wording.
 
 Open questions are listed in the design spec. Station sheets, documents to track and printout layouts are expected to change as Jason gathers feedback from other leaders before March.
 

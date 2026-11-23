@@ -12,7 +12,7 @@ Planning. Nothing is built yet. Other camps are welcome to use and adapt this un
 
 - One laptop and a printer. Windows or macOS. No network.
 - A relational database (SQLite to start) holds the current state, with a change-log table recording every edit.
-- Registrar station on the computer, two paper stations (documents, nurse), a numbered carry card per person.
+- Registrar station on the computer, two paper stations (documents, nurse), a numbered carry card printed only for people who have something to do at one of those stations.
 - Printouts are thin views over the data, so layouts can change until the week of camp.
 
 ## Camper data
