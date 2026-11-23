@@ -1,0 +1,41 @@
+# ===== Camper data: never commit =====
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.csv
+*.xlsx
+*.xls
+*.pdf
+/data/
+/backups/
+
+# ===== .NET =====
+bin/
+obj/
+*.user
+*.suo
+.vs/
+logs/
+*.log
+TestResults/
+coverage/
+publish/
+
+# Local config overrides
+**/appsettings.Development.json
+**/appsettings.Local.json
+
+# ===== Angular / Node =====
+web/**/node_modules/
+web/**/dist/
+web/**/tmp/
+web/**/out-tsc/
+web/**/.angular/cache/
+web/**/coverage/
+npm-debug.log
+
+# ===== OS / editor =====
+.DS_Store
+Thumbs.db
