@@ -16,7 +16,7 @@ Why this shape: the earlier offline-first multi-device design (Cairn) was not te
 - Faster, more accurate check-in than last year, with fewer sheets of paper to reconcile.
 - Cabin assignment before camp, changeable up to and during check-in day.
 - Per-station printed sheets that fit each station's work (registrar, documents, nurse).
-- A numbered carry card per person, printed at check-in.
+- A numbered carry card, printed at check-in only for a person who has something to do at the documents or nurse station. Everyone else is released at the registrar with their cabin number.
 - A reportable relational database. Every edit is recorded in a change-log table in that database.
 - Runs on Windows or macOS with no internet.
 - Layouts can change until the week of camp.
@@ -53,7 +53,7 @@ Why this shape: the earlier offline-first multi-device design (Cairn) was not te
 
 Before camp, Jason enters registrations and assigns cabins. On Friday people walk down a line of three stations, in person, carrying their own forms, medications and payments. Groups arrive by car-load, so church grouping does not help lookup.
 
-1. Registrar (the computer): find the person by search or add a walk-on, confirm cabin and payment, mark arrived, print the carry card, and print any slips needed by stations 2 and 3.
+1. Registrar (the computer): find the person by search or add a walk-on, confirm cabin and payment, mark arrived, and, if the person has something to do at stations 2 or 3, print a carry card (one trip through the line, listing only the stations that apply, with what each should expect and a blank initials line). With nothing to do, the person is released with their cabin number and gets no card.
 2. Documents (a volunteer lead, with a second volunteer who files): waivers; for leaders, SafeChurch documentation and training.
 3. Medical (the camp nurse): medical forms, medications, special instructions.
 
@@ -75,7 +75,7 @@ Stations 2 and 3 work on paper sheets. After check-in finishes, Jason keys their
 
 ### Printouts (provisional; each is a template plus a query, separate from the model)
 
-Carry card, registrar sheet (alphabetical), documents sheet, nurse health sheet and medication record, cabin leader sheet (roster, medical flags in words, never colour alone), cabin rosters, Sunday check-out list. Greyscale-safe. The exact set and layouts are expected to change.
+Carry card, registrar sheet (alphabetical), documents sheet, nurse health sheet and medication record, cabin leader sheet (roster, medical flags in words, never colour alone), cabin rosters, Sunday check-out list. The cabin leader sheet is a double-sided 4x6 badge card: roster on the front (12 to 23 campers), medical flags on the back, marked confidential. Colour is allowed, but every printout must still read in greyscale. The exact set and layouts are expected to change.
 
 ### Interface
 
@@ -83,7 +83,7 @@ Web UI served by the app on the laptop, localhost only. Priority screens: person
 
 ### Theme
 
-FiveTalents look, redone with the Design tool as the first step. Print-first. Fonts bundled.
+The FiveTalents look is the baseline. It is conformed to current tools with the Design tool as the first step and given a print-first standard, with each departure recorded. Fonts and icons bundled.
 
 ### Packaging
 
@@ -95,7 +95,7 @@ Database file lives outside the repo and is gitignored. Recommend full-disk encr
 
 ## Out of the first slice, and what comes first
 
-First slice: add a person by hand, assign a cabin, print one carry card. Then medications and documents, then the station sheets, then the Sunday list.
+First slice: add a person by hand, assign a cabin, print one carry card (for a person who needs it). Then medications and documents, then the station sheets, then the Sunday list.
 
 ## Open questions
 
@@ -114,6 +114,6 @@ New repo and folder `FiveTalents.Camp` beside FiveTalents. Same conventions as F
 - No login in Phase I, localhost only.
 - Browser printing with print CSS.
 - Documents flagged on leaders, never blocking.
-- Carry card printed at the registrar station.
+- Carry card printed at the registrar station, only when a downstream station has something to do.
 - Station sheets keyed in after check-in.
 - SQLite as the Phase I database.
