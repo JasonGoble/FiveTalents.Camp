@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Registrar sheet sample</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../fonts.css">
+<link rel="stylesheet" href="../print.css">
+<link rel="stylesheet" href="sheets.css">
+</head>
+<body class="sheet-body">
+<p class="preview-note">Sample data only. Letter portrait, 0.5 in margins built into the sheet. Print at 100% scale with no browser margins.</p>
+<main class="preview">
+  <article class="page-letter-portrait registrar-sheet">
+    <header class="head">
+      <div class="head-text">
+        <div class="eyebrow">FIVETALENTS CAMP, MARCH 12 TO 14, 2027</div>
+        <h1 class="sheet-title">Registrar sheet</h1>
+      </div>
+      <div style="font-size:var(--text-small);text-align:right">Alphabetical by last name<br>Page 1 of 1</div>
+    </header>
+    <div class="legend">
+      <span><span class="tick-box"></span> Arrived</span>
+      <span>Payment: <b>Paid</b>, <b>Promised</b>, <b>To verify</b>, <b>Comped</b>, <b>Church check pending</b></span>
+    </div>
+    <table class="table-print">
+      <thead>
+        <tr><th style="width:44px">In</th><th class="num" style="width:48px">No.</th><th>Name</th><th style="width:70px">Role</th><th style="width:150px">Cabin</th><th style="width:150px">Payment</th><th style="width:100px">Documents</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="tick-box"></span></td><td class="num">101</td><td>Sample, Camper A</td><td>Youth</td><td>Cabin Example 1</td><td><b>Paid</b></td><td>Complete</td></tr>
+        <tr><td><span class="tick-box"></span></td><td class="num">102</td><td>Sample, Camper B</td><td>Youth</td><td>Cabin Example 2</td><td><b>Promised</b></td><td>Complete</td></tr>
+        <tr><td><span class="tick-box"></span></td><td class="num">103</td><td>Sample, Leader C</td><td>Leader</td><td>Cabin Example 1</td><td><b>To verify</b></td><td><b>MISSING: 2</b></td></tr>
+        <tr><td><span class="tick-box"></span></td><td class="num">104</td><td>Sample, Camper D</td><td>Youth</td><td>Cabin Example 3</td><td><b>Church check pending</b></td><td>Complete</td></tr>
+        <tr><td><span class="tick-box"></span></td><td class="num">105</td><td>Sample, Camper E</td><td>Youth</td><td>Not assigned</td><td><b>Paid</b></td><td>Complete</td></tr>
+        <tr><td><span class="tick-box"></span></td><td class="num">106</td><td>Sample, Leader F</td><td>Leader</td><td>Cabin Example 2</td><td><b>Comped</b></td><td>Complete</td></tr>
+        <tr><td><span class="tick-box"></span></td><td class="num">107</td><td>Sample, Camper G</td><td>Youth</td><td>Cabin Example 3</td><td><b>Paid</b></td><td>Complete</td></tr>
+        <tr><td><span class="tick-box"></span></td><td class="num">108</td><td>Sample, Camper H</td><td>Youth</td><td>Cabin Example 2</td><td><b>Promised</b></td><td>Complete</td></tr>
+      </tbody>
+    </table>
+    <div class="attention"><b>Needs attention:</b> Row 103 is missing 2 documents (a flag only, not a block). Row 105 has no cabin. Entries are never corrected silently; a person checks them.</div>
+    <div class="spacer"></div>
+    <footer class="foot">Sample data only. Printed from FiveTalents Camp. Legible in greyscale: status is always a word.</footer>
+  </article>
+</main>
+</body>
+</html>

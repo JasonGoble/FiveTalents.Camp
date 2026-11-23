@@ -7,6 +7,7 @@ ADRs capture the why behind significant decisions. Each is numbered and never ed
 | # | Title | Status |
 |---|-------|--------|
 | [0001](0001-relational-system-of-record-with-change-log.md) | Relational system of record with a change-log table | Accepted |
+| [0002](0002-conform-look-and-print-first-standard.md) | Conform the FiveTalents look and add a print-first standard | Accepted |
 
 ## Template
 

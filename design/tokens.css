@@ -1,0 +1,58 @@
+/*
+  FiveTalents.Camp design tokens.
+  Baseline: the FiveTalents look (palette, type, radii). Additions for print are marked "Camp".
+  See departures.md for every difference from FiveTalents and the reason.
+*/
+
+:root {
+  /* Primary palette (FiveTalents) */
+  --color-midnight:  #0d3f78;
+  --color-gold:      #C8A96B;
+  --color-parchment: #F7F3EB;
+  --color-charcoal:  #2B2B2B;
+
+  /* Secondary palette (FiveTalents) */
+  --color-forest:    #2F5D50;
+  --color-burgundy:  #6A3B3B;
+  --color-slate:     #5E6B7A;
+
+  /* Sidebar (FiveTalents, screen only) */
+  --color-sidebar-text:        rgba(255, 255, 255, 0.85);
+  --color-sidebar-text-active: #ffffff;
+  --color-sidebar-hover:       rgba(255, 255, 255, 0.08);
+  --color-sidebar-active-bg:   rgba(200, 169, 107, 0.15);
+  --color-sidebar-border:      rgba(255, 255, 255, 0.12);
+
+  /* Typography (FiveTalents) */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+
+  /* Radius (FiveTalents) */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Camp: ink for paper. Dark text on white stock; nothing lighter than #767676. */
+  --paper:      #ffffff;
+  --ink:        #1a1a1a;
+  --ink-muted:  #4a4a4a;
+  --ink-rule:   #1a1a1a;
+  --ink-hair:   #b5b5b5;
+  --ink-fill:   #e8e8e8;
+
+  /* Camp: type scale (px; 1pt = 4/3 px). Body 12pt, captions 9pt at minimum. */
+  --text-caption: 12px;
+  --text-small:   14px;
+  --text-body:    16px;
+  --text-lead:    18px;
+  --text-title:   36px;
+
+  /* Camp: rules are never finer than 1px, which can vanish on paper. */
+  --rule-width: 1px;
+  --rule-heavy: 2px;
+
+  /* Camp: status borders. A status is always a word; the border style supports it. */
+  --status-solid:  1px solid var(--ink);
+  --status-dashed: 1px dashed var(--ink);
+  --status-heavy:  2px solid var(--ink);
+}
